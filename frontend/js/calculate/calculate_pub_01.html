@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	select {
+	    width: 200px;
+	    height: 30px;
+	    padding-left: 10px;
+	    font-size: 18px;
+	    color: gray;
+	    border: 1px solid #dadada;
+	    border-radius: 3px;
+	}
+	.list {
+	    width: 360px;
+	    padding: 10px 0;
+	    margin-left: 10px;
+	    border-top: 1px solid #dadada;
+	}
+	.product_name {
+		width : 120px;
+		float : left;
+	}
+
+	.input_60 {
+		width: 60px;
+	}
+
+</style>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+})
+</script>
+</head>
+<body>
+	<div id="selectedList" style="margin : 10px;border-top : 1px solid gray;padding : 5px;background: #f5f5f5">
+			<div class='list'>
+				<div class="product_name">펫배낭</div>
+				<div>
+					<span class="price">12000</span>
+					<input type="button" class="minus" value="-" />
+					<input type="text" class="input_60" value="0"/>
+					<input type="button" class="plus" value="+" />
+				</div>
+			</div>
+			<div class='list'>
+				<div class="product_name">자동차안전벨트</div>
+				<div>
+					<span class="price">5900</span>
+					<input type="button" class="minus" value="-" />
+					<input type="text" class="input_60" value="0" />
+					<input type="button" class="plus" value="+" />
+				</div>
+			</div>
+	</div>
+	<div style="font: bold 28px/1.2 Tahoma,sans-serif;">
+			<span>총합계</span>
+			<span id="total" style="color: #f43142;">0</span>
+			<span>원</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	select {
+	    width: 200px;
+	    height: 30px;
+	    padding-left: 10px;
+	    font-size: 18px;
+	    color: gray;
+	    border: 1px solid #dadada;
+	    border-radius: 3px;
+	}
+	.list {
+	    width: 260px;
+	    padding: 10px 0;
+	    margin-left: 10px;
+	    border-top: 1px solid #dadada;
+	}
+	.product_name {
+		width : 150px;
+		float : left;
+	}
+
+</style>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+		$("#selectProduct").change(function(){
+			// 1. 선택된 상품금액 구하기
+			
+			// 2. 선택된 상품명 구하기
+			
+			// 3. append 태그 만들기
+			
+			// 4. selectedList에 마지막 자식태그로 삽입하기
+			
+			// 5. select 태그 나자신의 값을 "" 으로 세팅
+			
+			// 6. 선택된 value값을 기존 총합계에 더하기 위해서 
+			//     id가 total인 영역에 값을 가져온다
+			
+			// 7. total 값과 select태그의 선택된 value값을 더해서 총합을 구한다
+			
+			// 8. total값을 7. 에서 구한 총합으로 변경한다
+		})
+})
+</script>
+</head>
+<body>
+	<select id="selectProduct">
+		<option value="">선택</option>
+		<option value="12000">펫배낭</option>
+		<option value="5900">자동차안전벨트</option>
+		<option value="5900">애견칫솔세트</option>
+		<option value="2500">반려동물용식기</option>
+		<option value="3000">반려동물용장난감</option>
+	</select>
+	<div id="selectedList" style="margin : 10px;border-top : 1px solid gray;padding : 5px;background: #f5f5f5">
+			<!-- <div class='list'>
+				<div class="product_name">펫배낭</div>
+				<div>
+					<span class="price">12000</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div>
+			<div class='list'>
+				<div class="product_name">자동차안전벨트</div>
+				<div>
+					<span class="price">5900</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div>
+			<div class='list'>
+				<div class="product_name">애견칫솔세트</div>
+				<div>
+					<span class="price">5900</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div> -->
+	</div>
+	<div style="font: bold 28px/1.2 Tahoma,sans-serif;">
+			<span>총합계</span>
+			<span id="total" style="color: #f43142;">0<!-- 13800 --></span>
+			<span>원</span>
+	</div>
+</body>
+</html>
