@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	.table-bordered {
+	    border: 1px solid #ddd;
+	}
+	.table {
+	    width: 100%;
+	    max-width: 100%;
+	    margin-bottom: 20px;
+	}
+	table {
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	}
+	thead {
+	    display: table-header-group;
+	    vertical-align: middle;
+	    border-color: inherit;
+	}
+	tbody {
+	    display: table-row-group;
+	    vertical-align: middle;
+	    border-color: inherit;
+	}
+	td, th {
+	    border: 1px solid #ddd;
+	}
+	.odd {
+		background-color :  #ccd5ea;
+	}
+	.even {
+		background-color :  #e7ebf5;
+	}
+	.on {
+		background-color : #0065ac;
+		color : #fff;
+	}
+</style>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 최초 실행 시, 홀/짝에 대해서 클래스 한방에 적용
+	
+	// 첫번째 방법 tr태그의 each문을 통해서 홀짝 체크 후, 적용
+	$("tbody > tr").each(function(index){
+		// 짝수
+		if(index % 2 == 0) {
+			$(this).addClass("even");
+		}
+		// 홀수
+		else {
+			$(this).addClass("odd");
+		}
+	})
+	// 두번째 방법 odd/even 셀렉터를 통한 클래스 적용
+	//$("tbody > tr:odd").addClass("odd");
+	//$("tbody > tr:even").addClass("even");
+	
+	// 한줄,한줄 마우스 오버시,	
+	$("tbody tr").mouseover(function(){
+		// 현재 포커스 되어있는 형제태그들 중, on 클래스가 존재하는 형제태그를 검색 후, on클래스 삭제
+		$(this).siblings(".on").removeClass("on");
+		// 이어서 포커스 되어있는 나자신 태그에 on 클래스 적용
+		$(this).addClass("on");
+	})
+})
+</script>
+</head>
+<body>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th >
+					함수
+				</th>
+				<th>
+					설명
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >
+					parent
+				</td>
+				<td>
+					셀렉터 바로 직속 부모 태그 찾기
+				</td>
+			</tr>
+			<tr>
+				<td >
+					closest
+				</td>
+				<td >
+					셀렉터 부모들 태그 중, 부모셀렉터랑 일치하는 부모찾을 때까지 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					children
+				</td>
+				<td>
+					셀렉터 바로 하위 자식태그들 찾기
+				</td>
+			</tr>
+			<tr>
+				<td>
+					find
+				</td>
+				<td>
+					셀렉터 자식태그(자손포함) 중  자식 셀렉터 찾기
+				</td>
+			</tr>
+			<tr>
+				<td>
+					siblings
+				</td>
+				<td>
+					셀렉터 형제노드 중 특정 셀렉터찾기
+				</td>
+			</tr>
+			<tr>
+				<td>
+					next
+				</td>
+				<td>
+					셀렉터 아래 형제 태그 찾기
+				</td>
+			</tr>
+			<tr>
+				<td>
+					prev
+				</td>
+				<td>
+					셀렉터 위의 형제 태그 찾기
+				</td>
+			</tr>
+			<tr>
+				<td>
+					first
+				</td>
+				<td>
+					셀렉터의 가장 첫 번째
+				</td>
+			</tr>
+			<tr>
+				<td>
+					last
+				</td>
+				<td>
+					셀렉터에 가장 마지막 번째
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

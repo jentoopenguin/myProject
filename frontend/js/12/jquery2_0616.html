@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <style type="text/css">
+      li {
+         list-style: none;
+      }
+      
+      .redPoint {
+         background-color : #0065ac;
+         color : #fff;
+      }
+   </style>
+   <script type="text/javascript" src="./jquery.js"></script>
+   <script type="text/javascript">
+      $(function(){
+        var group = ["사과","오렌지","상추","포도","목살","배추","삼겹살"];
+        $("#countBtn").click(function(){
+            // 과일 수 카운팅 0,1,3
+            var cnt1 = 0;
+            // 야채 수 카운팅 2,5
+            var cnt2 = 0;
+            // 고기 수 카운팅 4,6
+            var cnt3 = 0;
+            $.each(group, function(index, data){
+                if(data == '사과' || data == "오렌지" || data == "포도"){
+                    cnt1++;
+                }
+                
+                else if(data == "상추" || data == "배추"){
+                    cnt2++;
+                }
+
+                else if(data == "목살" || data == "삼겹살"){
+                    cnt3++;
+                }
+
+
+            })
+            $("#fruitCnt").html(cnt1);
+            $("#vegetableCnt").html(cnt2);
+            $("#meatCnt").html(cnt3);
+        })
+    })
+        
+   </script>
+</head>
+<body>
+        <input type="button" id="countBtn" value="과일,야채,고기 갯수 몇개?" />
+            <div id="fruitCnt"></div>
+            <div id="vegetableCnt"></div>
+            <div id="meatCnt"></div>
+</body>
+</html>

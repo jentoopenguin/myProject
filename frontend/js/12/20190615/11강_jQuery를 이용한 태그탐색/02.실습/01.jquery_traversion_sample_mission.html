@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn1").click(function(){
+			// 1. id button 태그 이전 h2 를 탐색하여 margin값 20px 설정
+
+			// 2. div 태그내에 존재하는 id가 button인 태그에
+			//     background-color값 red + font-weight 값 bold 적용
+			//     btnCls 클래스 추가
+
+			// 3. div 태그에 자식 첫번째 ul태그의 자식 두번째 li 태그 자식의 label 태그에
+			//    labelCls 클래스 추가
+			
+		})
+	})
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>
+				<h2 style="margin:20px;">태그1</h2>
+				<button id="btn" class="btnCls" style="background-color:red;font-size:12px;font-weight:bold;">버튼</button>
+			</li>
+			<li>
+				<label class="labelCls">라벨</label>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
