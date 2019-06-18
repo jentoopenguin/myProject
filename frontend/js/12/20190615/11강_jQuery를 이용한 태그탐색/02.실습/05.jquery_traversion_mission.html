@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+		//1. 셀렉터(첫번째 td) 부모태그 찾고 배경색(background = red)변경(SET)
+		$("#btn1").click(function(){
+			
+		})
+		//2. 셀렉터(두번째 td) 부모태그 찾고 배경색(background = blue)변경(SET)
+		$("#btn2").click(function(){
+			
+		})
+		//3. 셀렉터(네번째 td) 부모태그 찾고 배경색(background = yellow)변경(SET)
+		$("#btn3").click(function(){
+			
+		})
+		//4. 셀렉터(첫번째 td)에서 div태그 부모가 나올때까지 찾아서 글자 굵기(font-weight = bold)변경(SET)
+		$("#btn4").click(function(){
+			
+		})
+		//5. 셀렉터(세번째 td)에서 table태그부모까지 찾아서 글자크기(font-size = 20pt)변경(SET)
+		$("#btn5").click(function(){
+			
+		})
+		//6. 셀렉터(table)의 직속자식의 갯수(length)는?(GET)
+		//console.log 출력
+		$("#btn6").click(function(){
+			
+		})
+		//7. 셀렉터(table) 로부터 첫번째 tr에 첫번째 td의 HTML 코드 가져오기(GET)
+		//console.log 출력
+		$("#btn7").click(function(){
+			
+		})
+		//8. 셀렉터(table) 로부터 첫번째 td의 HTML 코드 가져오기(GET)
+		//console.log 출력
+		$("#btn8").click(function(){
+			
+		});
+		//9. 셀렉터(첫번째 td) 로부터 부모 div 찾은 후, 다음(두번째) div HTML 코드 가져오기(GET)
+		//console.log 출력
+		$("#btn9").click(function(){
+			
+		})
+		//10. 셀렉터(세번째 div) 로부터 이전(두번째) div의 첫번째 li HTML 코드 가져오기(GET)
+		//console.log 출력
+		$("#btn10").click(function(){
+			
+		})
+		//11. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 마지막 li HTML 코드 가져오기(GET)
+		//console.log 출력
+		$("#btn11").click(function(){
+			
+		})
+		//12. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 인 태그 갯수(length) 확인(GET)
+		//console.log 출력
+		$("#btn12").click(function(){
+			
+		})
+		//13. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 가 아닌 태그 갯수(length) 확인(GET)
+		//console.log 출력
+		$("#btn13").click(function(){
+			
+		})
+})
+</script>
+</head>
+<body>
+	<input type="button" id="btn1"  value="셀렉터(첫번째 td) 부모태그 찾고 배경색변경"/>
+	<input type="button" id="btn2" value="셀렉터(두번째 td) 부모태그 찾고 배경색변경"/><br/>
+	<input type="button" id="btn3" value="셀렉터(네번째 td) 부모태그 찾고 배경색변경"/>
+	<input type="button" id="btn4" value="셀렉터(첫번째 td)에서 div태그 부모가 나올때까지 찾아서 글자 굵기변경"/><br/>
+	<input type="button" id="btn5" value="셀렉터(세번째 td)에서 table태그부모까지 찾아서 글자크기변경"/>
+	<input type="button" id="btn6" value="셀렉터(table)의 직속자식의 갯수는?"/><br/>
+	<input type="button" id="btn7" value="셀렉터(table) 로부터 첫번째 tr에 첫번째 td의 HTML 코드 가져오기"/>
+	<input type="button" id="btn8" value="셀렉터(table) 로부터 첫번째 td의 HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn9" value="셀렉터(첫번째 td) 로부터 부모 div 찾은 후, 다음(두번째) div HTML 코드 가져오기"/>
+	<input type="button" id="btn10" value="셀렉터(세번째 div) 로부터 이전(두번째) div의 첫번째 li HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn11" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 마지막 li HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn12" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 인 태그 갯수 확인"/><br/>
+	<input type="button" id="btn13" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 가 아닌 태그 갯수 확인"/><br/>
+	
+	<!-- 첫번째 DIV -->
+	<div>
+		<table>
+			<tr>
+				<td>	
+					첫번째 TD
+					<h2>td에 있는 h2태그</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					두번째 TD
+				</td>
+			</tr>
+			<tr>
+				<td>
+					세번째 TD
+				</td>
+			</tr>
+			<tr>
+				<td>
+					네번째 TD
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- 두번째 DIV -->
+	<div>
+		<ul>
+			<li class="flt">
+				첫번째 LI
+			</li>
+			<li class="flt">
+				두번째 LI
+			</li>
+			<li class="flt">
+				세번째 LI
+			</li>
+			<li>
+				네번째 LI
+			</li>
+		</ul>
+		두번째 DIV
+	</div>
+	<!-- 세번째 DIV -->
+	<div>
+		세번째 DIV
+	</div>
+</body>
+</html>

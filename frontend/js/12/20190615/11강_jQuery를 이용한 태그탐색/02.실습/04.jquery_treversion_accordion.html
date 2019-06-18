@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 의 클릭 이벤트를 통한 효과 - 1</title>
+<style type="text/css">
+	* {
+		margin : 10px;
+	}
+	h1 {
+		font-size: 14px;
+	    font-weight: bold;
+	    text-align: center;
+	    padding: 14px 10px;
+	    color: #009cff;
+	    background-color: #fff;
+	    display: inline;
+	}
+	h5 {
+		padding: 14px 0 30px 0;
+	    border-top: 1px dotted #888;
+	    width: 50%;
+	    margin: -8px auto; 
+	}
+	.title {
+		font-size: 12px;
+    	padding: 14px 0 14px 30px;
+    	cursor: pointer;
+    	border-bottom: 1px solid #efefef;
+	}
+	
+	.contents {
+	    font-size: 12px;
+    	padding: 20px 0 20px 30px;
+    	background-color: #fafafa;
+	}
+</style>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".title").click(function(){
+			$(this).next().slideDown();
+			$(this).next().siblings(".contents").slideUp();
+		})
+	})
+</script>
+</head>
+<body>
+	<div style="text-align: center;">
+	 	<h1 >자주묻는 질문</h1>
+	 	<h5>자주 묻는 질문을 모아봤습니다.<br>FAQ에 해당 사항이 없다면 <a href="#" style="color:#009cff;">1:1 문의게시판</a>을 이용해 주세요!</h5>
+	</div>
+	
+	<div class="title">제목영역1</div>
+	<div class="contents" style="display:none;">
+		<p>컨텐츠영역1</p>
+		<p>컨텐츠영역1</p>
+		<p>컨텐츠영역1</p>
+		<p>컨텐츠영역1</p>
+	</div>
+	<div class="title">제목영역2</div>
+	<div class="contents" style="display:none;">
+		<p>컨텐츠영역2</p>
+		<p>컨텐츠영역2</p>
+		<p>컨텐츠영역2</p>
+		<p>컨텐츠영역2</p>
+	</div>
+	<div class="title">제목영역3</div>
+	<div class="contents" style="display:none;">
+		<p>컨텐츠영역3</p>
+		<p>컨텐츠영역3</p>
+		<p>컨텐츠영역3</p>
+		<p>컨텐츠영역3</p>
+	</div>
+	<div class="title">제목영역4</div>
+	<div class="contents" style="display:none;">
+		<p>컨텐츠영역4</p>
+		<p>컨텐츠영역4</p>
+		<p>컨텐츠영역4</p>
+		<p>컨텐츠영역4</p>
+	</div>
+</body>
+</html>

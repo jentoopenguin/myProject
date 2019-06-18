@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style type="text/css">
+		/* 갤러리 영역을 감싸는 컨테이너 */ 
+		.gallery_container {
+			position: relative;
+			width: 480px;
+			height:365px;
+			margin: 0 auto;
+			overflow-x:hidden;
+		}
+		/* 컨테이너 영역내에 존재하는 이미지 영역*/
+		.gallery_container > div {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		/*이전버튼,다음버튼 */
+		.prevBtn, .nextBtn{
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  margin-top: -22px;
+		  padding: 16px;
+		  color: #ffffff;
+		  font-weight: bold;
+		  font-size: 24px;
+		}
+		/* 다음버튼만을 위한..*/
+		.nextBtn {
+		  right: 0;
+		}
+
+		/*이전,다음버튼 마우스 오버효과*/
+		.prevBtn:hover, .nextBtn:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		/*하단 포인트*/
+		.dot {
+		  cursor:pointer;
+		  height: 13px;
+		  width: 13px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+		/* 포인트 초점*/ 
+		.on {
+			background-color: #717171;
+		}
+		img {
+			width:480px;
+			height:357px;
+		}
+	</style>
+	<script src="./js/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		/*
+			배너형 이미지 갤러리
+			무한이동이 아닌 정해진 이미지 영역내에서만 좌/우 버튼으로 이미지 이동
+		*/
+		$(function(){
+			// 애니메이션 진행 여부에 스위치 관련 값
+			var onoff = false;
+			$(".nextBtn").click(function(){
+				// 스위치가 꺼져 있을 경우에만 실행
+				if(onoff == false) {
+					// 즉시 스위치를 켜서 연속의 버튼 클릭을 막아준다
+					onoff = true;
+					// class dot 태그 중 on class 를 가지고 있는 태그의 index 번호를 획득
+					var index = $(".dot").index($(".on"));
+					// 마지막 번째 index 가 아닐경우에만 실행
+					if(index < $(".dot").length-1) {
+						// 전체 div 태그를 -480 px 만큼 전체 애니메이션 이동시킨다
+						$(".gallery_container div").animate({
+							 "left" : "-=480px"
+						},500,function(){
+							// 애니메이션 종료 시 스위치를 끈다
+							onoff = false;
+						})
+						// 현재 dot 태그에 on class 삭제
+						$(".dot").eq(index).removeClass("on");
+						// 다음번째 dot 태그에 on class 삭제
+						$(".dot").eq(index + 1).addClass("on");
+
+						/*
+							좌/우 버튼에 대한 show/hide 처리
+						*/
+						if(index + 1 == $(".dot").length-1) {
+							$(".nextBtn").hide();
+						}
+						else {
+							$(".nextBtn").show();	
+						}
+						$(".prevBtn").show();
+					}
+				}
+			})
+			/*
+				다음버튼으로부터 조건및 이동값에 따른 차이로 별도 설명 제외
+			*/
+			$(".prevBtn").click(function(){
+				if(onoff == false) {
+					onoff = true;
+					var index = $(".dot").index($(".on"));
+					if(index > 0) {
+						$(".gallery_container div").stop().animate({
+							 "left" : "+=480px"
+						},500,function(){
+							onoff = false;
+						})
+						$(".dot").eq(index).removeClass("on");
+						$(".dot").eq(index - 1).addClass("on");
+						if(index - 1 == 0) {
+							$(".prevBtn").hide();
+						}
+						else {
+							$(".prevBtn").show();
+						}
+						$(".nextBtn").show();
+					}
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="gallery_container" >
+		<div style="left: 0px;"><img src="./img/img1.png"></div>
+		<div style="left: 480px;"><img src="./img/img2.png"></div>
+		<div style="left: 960px;"><img src="./img/img3.png"></div>
+		<a class="prevBtn" style="display: none;" href="#prev">&#10094;</a>
+	  	<a class="nextBtn" href="#next">&#10095;</a>
+	</div>
+	<div style="text-align: center;" id="dotLayout">
+		<span class="dot on"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+</body>
+</html>

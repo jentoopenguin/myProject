@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+		//1. 셀렉터(첫번째 td) 부모태그 찾고 배경색변경
+		$("#btn1").click(function(){
+			$("td").eq(0).parent().css("background-color","red");
+		})
+		//2. 셀렉터(두번째 td) 부모태그 찾고 배경색변경
+		$("#btn2").click(function(){
+			$("td").eq(1).parent().css("background-color","blue");
+		})
+		//3. 셀렉터(네번째 td) 부모태그 찾고 배경색변경
+		$("#btn3").click(function(){
+			$("td").eq(3).parent().css("background-color","yellow");
+		})
+		//4. 셀렉터(첫번째 td)에서 div태그 부모가 나올때까지 찾아서 글자 굵기변경
+		$("#btn4").click(function(){
+			$("td").eq(0).closest("div").css("font-weight","bold");
+		})
+		//5. 셀렉터(세번째 td)에서 table태그부모까지 찾아서 글자크기변경
+		$("#btn5").click(function(){
+			$("td").eq(2).closest("table").css("font-size","20pt");
+		})
+		//6. 셀렉터(table)의 직속자식의 갯수는?
+		$("#btn6").click(function(){
+			var length = $("table").children().length;
+			console.log("자식의 갯수",length);
+		})
+		//7. 셀렉터(table) 로부터 첫번째 tr에 첫번째 td의 HTML 코드 가져오기
+		$("#btn7").click(function(){
+			var tag = $("table").find("tr").eq(0).children("td").html();
+			console.log(tag);
+		})
+		//8. 셀렉터(table) 로부터 첫번째 td의 HTML 코드 가져오기
+		$("#btn8").click(function(){
+			var tag = $("table").find("td").eq(0).html();
+			console.log(tag);
+		});
+		//9. 셀렉터(첫번째 td) 로부터 부모 div 찾은 후, 다음(두번째) div HTML 코드 가져오기
+		$("#btn9").click(function(){
+			var tag = $("td").eq(0).closest("div").next().html();
+			console.log(tag);
+		})
+		//10. 셀렉터(세번째 div) 로부터 이전(두번째) div의 첫번째 li HTML 코드 가져오기
+		$("#btn10").click(function(){
+			var tag = $("div").eq(2).prev().find("li").first().html();
+			console.log(tag);
+		})
+		//11. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 마지막 li HTML 코드 가져오기
+		$("#btn11").click(function(){
+			var tag = $("div").eq(0).next().find("li").last().html();
+			console.log(tag);
+		})
+		//12. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 인 태그 갯수 확인
+		$("#btn12").click(function(){
+			var f = $("div:eq(0)").next().find("li.flt");
+		 var len = $(f).length; 
+		 console.log(len);
+		})
+		//13. 셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 가 아닌 태그 갯수 확인
+		$("#btn13").click(function(){
+			  var g = $("div:eq(0)").next().not("li.flt");
+		 var len = $(g).html();
+		 console.log(len);
+		})
+})
+</script>
+</head>
+<body>
+	<input type="button" id="btn1"  value="셀렉터(첫번째 td) 부모태그 찾고 배경색변경"/>
+	<input type="button" id="btn2" value="셀렉터(두번째 td) 부모태그 찾고 배경색변경"/><br/>
+	<input type="button" id="btn3" value="셀렉터(네번째 td) 부모태그 찾고 배경색변경"/>
+	<input type="button" id="btn4" value="셀렉터(첫번째 td)에서 div태그 부모가 나올때까지 찾아서 글자 굵기변경"/><br/>
+	<input type="button" id="btn5" value="셀렉터(세번째 td)에서 table태그부모까지 찾아서 글자크기변경"/>
+	<input type="button" id="btn6" value="셀렉터(table)의 직속자식의 갯수는?"/><br/>
+	<input type="button" id="btn7" value="셀렉터(table) 로부터 첫번째 tr에 첫번째 td의 HTML 코드 가져오기"/>
+	<input type="button" id="btn8" value="셀렉터(table) 로부터 첫번째 td의 HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn9" value="셀렉터(첫번째 td) 로부터 부모 div 찾은 후, 다음(두번째) div HTML 코드 가져오기"/>
+	<input type="button" id="btn10" value="셀렉터(세번째 div) 로부터 이전(두번째) div의 첫번째 li HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn11" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 마지막 li HTML 코드 가져오기"/><br/>
+	<input type="button" id="btn12" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 인 태그 갯수 확인"/><br/>
+	<input type="button" id="btn13" value="셀렉터(첫번째 div) 로부터 다음(두번째) div의 자손태그 중, li태그(클래스명이 flt) 가 아닌 태그 갯수 확인"/><br/>
+	
+	<!-- 첫번째 DIV -->
+	<div>
+		<table>
+			<tr>
+				<td>	
+					첫번째 TD
+					<h2>td에 있는 h2태그</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					두번째 TD
+				</td>
+			</tr>
+			<tr>
+				<td>
+					세번째 TD
+				</td>
+			</tr>
+			<tr>
+				<td>
+					네번째 TD
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- 두번째 DIV -->
+	<div>
+		<ul>
+			<li class="flt">
+				첫번째 LI
+			</li>
+			<li class="flt">
+				두번째 LI
+			</li>
+			<li class="flt">
+				세번째 LI
+			</li>
+			<li>
+				네번째 LI
+			</li>
+		</ul>
+		두번째 DIV
+	</div>
+	<!-- 세번째 DIV -->
+	<div>
+		세번째 DIV
+	</div>
+</body>
+</html>

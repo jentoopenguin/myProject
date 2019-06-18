@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+      li {
+         list-style: none;
+      }
+      
+      .redPoint {
+         background-color : #0065ac;
+         color : #fff;
+      }
+   </style>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript">
+      
+      $(window).resize(function(){
+         console.log(리사이즈 발생);
+      })
+
+      $(window).scroll(function(){
+         console.log(스크롤 발생);
+      })
+
+      $(window).resize(function(){
+         console.log(리사이즈 발생);
+      })
+    </script>
+</html>
+<body>
+    <input type="button" id="valBtn" value="HTML값확인" />
+   <div>
+      <div>
+         <ul>
+            <li class="redCls .redPoint">
+               첫번째 내용
+            </li>
+            <li>
+               두번째 내용
+            </li>
+            <li class="redCls">
+               세번째 내용
+            </li>
+            <li class="redCls">
+               네번째 내용
+            </li>
+            <li>
+               다섯번째 내용
+            </li>
+         </ul>
+      </div>
+   </div>
+</body>

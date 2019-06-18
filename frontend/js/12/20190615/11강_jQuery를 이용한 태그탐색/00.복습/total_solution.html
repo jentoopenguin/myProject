@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.button div {
+	    position: absolute;
+	    padding: 10px;
+	}
+	
+	.first_btn {
+	    color: #fff;
+	    background-color: #39babf;
+	    -webkit-transform: rotateX(90deg);
+	    -webkit-transition: all 0.2s ease;
+	    -webkit-transform-origin: 50% 50% -25px;
+	}
+	
+	.second_btn {
+	    color: #fff;
+	    background-color: #0065ac;
+	    -webkit-transform: rotateX(0deg);
+	    -webkit-transition: all 0.2s ease;
+	    -webkit-transform-origin: 50% 50% -25px;
+	} 
+	
+	.first_btn_over {
+	 	color: #ffffff;
+	    -webkit-transition: all 0.2s ease;
+	    -webkit-transform: rotateX(0deg);
+	}
+	
+	.second_btn_over {
+		background-color: #000000;
+	    -webkit-transition: all 0.2s ease;
+	    -webkit-transform: rotateX(-90deg);
+	}
+</style>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 1. id가 txt1인 태그의 value값을 획득하여 console.log에 출력
+	var value = $("#txt1").val();
+	console.log(value);
+	//2. id가 txt1인 태그에 스타일 margin 값을 10px 설정
+	$("#txt1").css("margin",10);
+	
+	// 3. name이 rdo 태그 중, checked가 된 태그의 value값(여) 을 획을 후, console.log에 출력
+	var value2 = $("input[name=rdo]:checked").val();
+	console.log(value2);
+	
+	 // 4. id가 chk인 체크박스의 checked속성(true) 획득해서 console.log에 출력
+	 var value3 = $("#chk").prop("checked");
+	 console.log(value3);
+	 
+	 /*
+	 	5. id가 btn1 클릭 시, id가 makeBtn 태그안에 <input type='button' value='동적으로생성된 버튼입니다'/> 붙이기
+		 	+ id가 copyLayer인 태그영역내에 존재하는 태그를 id가 pasteLayer 태그에 동일하게 적용하기
+	 */
+	 $("#btn1").click(function(){
+		 var tag = "<input type='button' value='동적으로생성된 버튼입니다'/>";
+		 $("#makeBtn").html(tag);
+		 var html = $("#copyLayer").html();
+		 $("#pasteLayer").html(html);
+	 })
+	 
+	/*
+		6. id가 btn인 태그에 "button" 클래스 추가
+		7. id가 btn 인 태그에 첫번째 자식 div 태그에 first_btn 클래스 추가
+		8. id가 btn 인 태그에 두번째 자식 div 태그에 second_btn 클래스 추가
+	*/
+	$("#btn").addClass("button");
+	$("#btn > div:eq(0)").addClass("first_btn");
+	$("#btn > div:eq(1)").addClass("second_btn");
+	
+	/*
+		9. mouseover,mouseout 또는 hover 이벤트를 통하여
+			mouse가 id가 btn인 태그에 over 되었을 경우
+				- id가 btn의 첫번째 div 자식태그에 first_btn_over 클래스 추가
+		  		  id가 btn의 두번째 혹은 마지막번째 div 자식태그에 second_btn_over 추가
+		  	mouse가 id가 btn인 태그에 out 되었을 경우
+		  	    - id가 btn의 첫번째 div 자식태그에 first_btn_over 클래스 제거
+	  			  id가 btn의 두번째 혹은 마지막번째 div 자식태그에 second_btn_over 제거
+  	*/
+	$("#btn").hover(function(){
+		$("#btn > div:first").addClass("first_btn_over");
+		$("#btn > div:last").addClass("second_btn_over");
+	},function(){
+		$("#btn > div:first").removeClass("first_btn_over");
+		$("#btn > div:last").removeClass("second_btn_over");
+	})
+	
+	/*
+		10. id가 btn2인 태그 클릭 시, 
+		- id가 leesang태그의 src 값을   ./img/leesang.svg 로 교체 + img 태그의 넓이,높이값을 256px로 교체 (css 함수가 아닌, animate함수를 사용해보세요. - 3초)
+		- id가 tutle_king태그의 src 값을   ./img/tutle_king.svg 로 교체  + img 태그의 넓이,높이값을 256px로 교체 (css 함수가 아닌, animate함수를 사용해보세요.- 3초)
+	*/
+	 $("#btn2").click(function(){
+		$("#leesang").attr("src","./img/leesang.svg").animate({
+			width : 256,
+			height : 256
+		},3000)
+		$("#tutle_king").attr("src","./img/tutle_king.svg").animate({
+			width : 256,
+			height : 256
+		},3000)
+	})
+	
+	//11.  id가 btn3 태그 클릭시, <p>함수들이 언제 사용되고 어떻게 하면 값을 가져오고 설정하는지가 핵심!</p> 태그를 아래 주석영역에 삽입
+	$("#btn3").click(function(){
+		var tag = "<p>함수들이 언제 사용되고 어떻게 하면 값을 가져오고 설정하는지가 핵심!</p>";
+		$(".insertLayout").prepend(tag);	
+	});
+	
+	//12. id가 btn4 태그 클릭 시, insertLayout 내에 존재하는 첫번째 p 태그 삭제
+	$("#btn4").click(function(){
+		$(".insertLayout > p:eq(0)").remove();
+	})
+	//13. id가 btn5 태그 클릭 시, insertLayout 내에 존재하는 모든 자식태그 비우기
+	$("#btn5").click(function(){
+		$(".insertLayout").empty();
+	})
+});
+</script>
+</head>
+<body>
+	<!-- 
+		 1. id가 txt1인 태그의 value값을 획득하여 console.log에 출력
+		 2. id가 txt1인 태그에 스타일 margin 값을 10px 설정
+		 3. name이 rdo 태그 중, checked가 된 태그의 value값(여) 을 획을 후, console.log에 출력
+		 4. id가 chk인 체크박스의 checked속성(true) 획득해서 console.log에 출력
+	 -->
+	 <h2>Quiz</h2>
+	 <div>
+		<input type="text" id="txt1" readonly="readonly" value="안녕" /><br/>
+		<input type="radio" name="rdo" value="남"  /> 남자
+		<input type="radio" name="rdo" value="여" checked="checked" /> 여자 <br/>
+		<input type="checkbox" id="chk" value="Y"  checked="checked"/>
+	</div>
+	<h2>Quiz</h2>
+	<div>
+		<!-- 
+			 5. id가 btn1 클릭 시, id가 makeBtn 태그안에 <input type='button' value='동적으로생성된 버튼입니다'/> 붙이기
+			 	+ id가 copyLayer인 태그영역내에 존재하는 태그를 id가 pasteLayer인 태그에 동일하게 적용하기
+			 	* 아래와 같은 주석처리된 내용과 동일해야함
+		-->
+		<input type="button" id="btn1" value="버튼생성 및 p태그에 HTML 복사" />
+		<div id="copyLayer">
+			복사영역입니다.
+			<input type="text" value="이태그도 복사가 되어야겠죠?"/>
+		</div>
+		<span id="makeBtn">
+			<!-- <input type='button' value='동적으로생성된 버튼입니다'/> -->
+		</span>
+		<p id="pasteLayer">
+			<!--  
+				복사영역입니다
+				<input type="text" value="이태그도 복사가 되어야겠죠?"/>
+			 -->
+		</p>
+	</div>
+	<!--   
+		6. id가 btn인 태그에 "button" 클래스 추가
+		7. id가 btn 인 태그에 첫번째 자식 div 태그에 first_btn 클래스 추가
+		8. id가 btn 인 태그에 두번째 자식 div 태그에 second_btn 클래스 추가
+	-->
+	<!-- 
+		9. mouseover,mouseout 또는 hover 이벤트를 통하여
+			mouse가 id가 btn인 태그에 over 되었을 경우
+				- id가 btn의 첫번째 div 자식태그에 first_btn_over 클래스 추가
+				  id가 btn의 두번째 혹은 마지막번째 div 자식태그에 second_btn_over 추가
+	-->
+	<h2>Quiz</h2>
+	<div>
+	    <div id="btn">
+	        <div>버튼</div>
+	        <div>버튼</div>
+	    </div>
+	</div>
+	<h2>Quiz</h2>
+	<div style="margin-top:50px;">
+		<!--
+				10. id가 btn2인 태그 클릭 시, 
+				- id가 leesang태그의 src 값을   ./leesang.svg 로 교체 + img 태그의 넓이,높이값을 256px로 교체 (css 함수가 아닌, animate함수를 사용해보세요. - 3초)
+				- id가 tutle_king태그의 src 값을   ./tutle_king.svg 로 교체  + img 태그의 넓이,높이값을 256px로 교체 (css 함수가 아닌, animate함수를 사용해보세요.- 3초)
+	 	-->
+		<input type="button" id="btn2" value="이미지 교체" />
+		<div id="cardImg">
+			<img id="leesang" style="width : 128px;height:128px;" src="./img/mini_leesang.svg" />
+			<img id="tutle_king" style="width : 128px;height:128px;" src="./img/mini_tutle.svg" />
+		</div>
+	</div>
+	<h2>Quiz</h2>
+	<!--  
+		11.  id가 btn3 태그 클릭시, <p>함수들이 언제 사용되고 어떻게 하면 값을 가져오고 설정하는지가 핵심!</p> 태그를 아래 주석영역에 삽입 
+		12. id가 btn4 태그 클릭 시, insertLayout 내에 존재하는 첫번째 p 태그 삭제
+		13. id가 btn5 태그 클릭 시, insertLayout 내에 존재하는 모든 자식태그 비우기	
+	-->
+	<input type="button" id="btn3" value="태그 삽입하기" />
+	<input type="button" id="btn4" value="첫번째 p태그 삭제" />
+	<input type="button" id="btn5" value="insertLayout내에 존재하는 자식 태그 비우기 " />
+	<div class="insertLayout">
+		<!-- <p>함수들이 언제 사용되고 어떻게 하면 값을 가져오고 설정하는지가 핵심!</p> -->
+		<p>
+			jQuery 강의가 어느덧 6주차를향해 달려가고 있습니다
+		</p>
+		<p>
+			지금문제들을 해결할 수 있으면 대부분의 기본 UI기능 제작은 충분합니다
+		</p>
+	</div>
+		
+</body>
+</html>

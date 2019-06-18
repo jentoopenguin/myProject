@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	select {
+	    width: 200px;
+	    height: 30px;
+	    padding-left: 10px;
+	    font-size: 18px;
+	    color: gray;
+	    border: 1px solid #dadada;
+	    border-radius: 3px;
+	}
+	.list {
+	    width: 260px;
+	    padding: 10px 0;
+	    margin-left: 10px;
+	    border-top: 1px solid #dadada;
+	}
+	.product_name {
+		width : 150px;
+		float : left;
+	}
+
+</style>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("input[type=button]").click(function(){
+		var price = $(this).parent().prev().html();
+		// 삭재버튼 기준 클래스 productList 부모를 찾을때까지 올라가서 삭제
+		$(this).closest(".list").remove();
+	})
+})
+</script>
+</head>
+<body>
+	<select id="selectProduct">
+		<option value="">선택</option>
+		<option value="12000">펫배낭</option>
+		<option value="5900">자동차안전벨트</option>
+		<option value="5900">애견칫솔세트</option>
+		<option value="2500">반려동물용식기</option>
+		<option value="3000">반려동물용장난감</option>
+	</select>
+	<div id="selectedList" style="margin : 10px;border-top : 1px solid gray;padding : 5px;background: #f5f5f5">
+			<div class='list'>
+				<div class="product_name">펫배낭</div>
+				<div>
+					<span class="price">12000</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div>
+			<div class='list'>
+				<div class="product_name">자동차안전벨트</div>
+				<div>
+					<span class="price">5900</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div>
+			<div class='list'>
+				<div class="product_name">애견칫솔세트</div>
+				<div>
+					<span class="price">5900</span>
+					<span class="remove"><input type="button" value="X"/></span>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

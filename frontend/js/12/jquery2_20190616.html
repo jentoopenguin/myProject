@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <style type="text/css">
+      li {
+         list-style: none;
+      }
+      
+      .redPoint {
+         background-color : #0065ac;
+         color : #fff;
+      }
+   </style>
+   <script type="text/javascript" src="./jquery.js"></script>
+   <script type="text/javascript">
+      $(function(){
+         /*$("li:odd").css({
+            "background-color" : "blue",
+            "color" : "#fff"
+         })
+         $("li:even").css({
+            "background-color" : "red",
+            "color" : "#fff"
+         })*/
+         $("li").each(function(index){
+            // 인덱스 % 갯수
+            // 짝수면
+            var bc = "";
+            if(0 == index % 2){
+               bc = "blue";
+            }
+            else {
+               bc = "red";
+            }
+            $(this).css({
+               "background-color" : bc,
+               "color" : "#fff"
+            })
+         })
+      })
+   </script>
+</head>
+<body>
+   <div>
+      <ul>
+         <li>
+            첫번째 내용
+         </li>
+         <li>
+            두번째 내용
+         </li>
+         <li>
+            세번째 내용
+         </li>
+         <li>
+            네번째 내용
+         </li>
+         <li>
+            다섯번째 내용
+         </li>
+      </ul>
+   </div>
+</body>
+</html>

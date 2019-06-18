@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <style type="text/css">
+      li {
+         list-style: none;
+      }
+      
+      .redPoint {
+         background-color : #0065ac;
+         color : #fff;
+      }
+   </style>
+   <script type="text/javascript" src="./js/jquery.js"></script>
+   <script type="text/javascript">
+      $(function(){
+            var it;
+            $("#startBtn").click(function(){
+                it = setInterval(function(){
+                    var tag = "<li>실행</li>";
+                    $("ul").append(tag);
+                },1000);
+            })
+      })
+   </script>
+</head>
+<body>
+    <input type="button" id="startBtn" value="시작" />
+    <input type="button" id="endBtn" value="중지" />
+    <div>
+        <ui></ui>
+    </div>
+</body>
+</html>
+
