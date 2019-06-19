@@ -1,15 +1,16 @@
-/* body */
-{
-    padding: 0px;
-    border: 0px;
-    margin: 0px;
-    background-color: grey;
+* {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+/*vertical-align: baseline;*/
+list-style: none;
 }
 
 /* a */
 a{
     text-decoration: none;
-    color: #555555;
 }
 
 /* li */
@@ -51,50 +52,83 @@ body{
     right: 50px;
 }
 
-/* navbar */
-.navbar{
-    height: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
 
 /* title */
 .title{
-    line-height: 60px;
     font-size: 20px;
-    color: #4da6ff;
+    color: black;
+    width: 100%;
+    border: 1px solid red;
+    
 }
-
-/* navbar #menu */
-.navbar #menu{
-    float: right;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* navbar #menu li */
-.navbar #menu li{
+/* #menu */
+#main_menu li{
     float: left;
-    margin-left: 50px;
-    line-height: 60px;
+    padding: 8px 16px;
+    border: 1px solid red;
+    background-color: cornflowerblue;
+    
 }
 
-/* navbar #menu li a */
-.navbar #menu li a{
-    color: #555555;
-    font-size: 13px;
+/* #main_menu li a */
+#main_menu li a{
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    display: block;
+    padding: 8px 16px;
+    text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);   
 }
+
+#main-menu li:nth-child(1) a {
+    border-left 1px solid rgba(0,0,0,0.2);
+}
+/* #sub-new */
+
+#main_menu #sub_new{
+    position: absolute;
+    background: #182952;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#main_menu li:hover #sub_new {
+    opacity: 1;
+    visibility: visible;
+}
+
+#main_menu #sub_new li{
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    text-align: center;
+    float: left;
+    -webkit-transition: 2s;
+    transition: 2s;
+}
+
+#main_menu #sub_new a{
+
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-right: 0px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
 /* hero-header */
 .hero-header{
     height: 550px;
     background-image: url(imgs/smallserver.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    
+    background-position: center;    
 }
 
 h3{
@@ -229,13 +263,6 @@ h3{
 
 .clearfix{
     clear: both;
-}
-
-.navbar .btn{
-    color: #555555;
-}
-.navbar .btn:hover {
-    color: lightblue;
 }
 
 footer{
