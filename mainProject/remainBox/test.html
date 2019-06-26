@@ -1,0 +1,131 @@
+$(".view_more").click(function(){
+				
+    var tag1 = '<li class="item">'+
+                     '<div class="thumb_flip">'+
+                         '<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/52/251523-8FED-46E1-8AB6-8C4D387924AB.large.jpg" /></div>'+
+                         '<div class="back">'+
+                            '<div class="star-rating2" style="float:left;">'+
+                                '<span style="width:20%;"></span>'+
+                            '</div>'+
+                            '<p >괜히봤네요</p>'+
+                            '<span class="bg"></span>'+
+                        '</div>'+
+                     '</div>'+
+                     '<div class="title" title="존 윅 3: 파라벨룸"><h3>존 윅 3: 파라벨룸</h3></div>'+
+                     '<div class="infoBtn" >'+
+                         '<a  class="btn detail_btn" href="#" >상세정보</a>'+
+                         '<a  class="btn reserveBtn" href="#">예매하기</a>'+
+                         '<input type="hidden" class="openday" value="2019.06.26" />'+
+                         '<input type="hidden" class="director" value="채드 스타헬스키" />'+
+                         '<input type="hidden" class="actors" value="키아누 리브스, 할리 베리, 로렌스 피쉬번, 이안 맥쉐인" />'+
+                         '<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/B1/F40341-32C0-4540-9C9D-A88D5C04EBEB.large.jpg" />'+
+                         '<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/53/7EA147-B4F5-4E3F-89CD-1AC40D095848.large.jpg" />'+
+                         '<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/7D/DB9C85-DB01-4C41-8B17-048350E2F0C9.large.jpg" />'+
+                         '<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/09/E44D58-A48E-453B-B79F-69C9A28C8B38.large.jpg" />'+
+                     '</div>'+
+                 '</li>';
+     var tag2 = '<li class="item">'+
+                     '<div class="thumb_flip">'+
+                         '<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/FA/023CEE-98B5-46A5-8877-192D752FBA4C.large.jpg" /></div>'+
+                         '<div class="back">'+
+                            '<div class="star-rating2" style="float:left;">'+
+                                '<span style="width:20%;"></span>'+
+                            '</div>'+
+                            '<p >괜히봤네요</p>'+
+                            '<span class="bg"></span>'+
+                        '</div>'+
+                     '</div>'+
+                     '<div class="title" title="맨 인 블랙: 인터내셔널"><h3>맨 인 블랙: 인터내셔널</h3></div>'+
+                     '<div class="infoBtn" >'+
+                         '<a  class="btn detail_btn" href="#" >상세정보</a>'+
+                         '<a  class="btn reserveBtn" href="#">예매하기</a>'+
+                         '<input type="hidden" class="openday" value="2019.06.12" />'+
+                         '<input type="hidden" class="director" value="F. 게리 그레이" />'+
+                         '<input type="hidden" class="actors" value="크리스 헴스워스, 테사 톰슨, 리암 니슨, 엠마 톰슨" />'+
+                         '<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/25/EEFED9-A099-4E3A-B578-19AA3449981B.large.jpg" />'+
+                         '<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/CE/30A867-7913-4422-B959-D486CAF77E10.large.jpg" />'+
+                         '<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/42/67042E-6D78-47B8-891F-014228F6186D.large.jpg" />'+
+                         '<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/F4/5234F9-A815-4884-A82D-CD949BB50542.large.jpg" />'+
+                     '</div>'+
+                 '</li>';
+    var tag3 = '<li class="item">'+
+                     '<div class="thumb_flip">'+
+                         '<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/E2/1403D9-9EE2-428D-9D30-E5009102A833.large.jpg" /></div>'+
+                         '<div class="back">'+
+                            '<div class="star-rating2" style="float:left;">'+
+                                '<span style="width:20%;"></span>'+
+                            '</div>'+
+                            '<p >괜히봤네요</p>'+
+                            '<span class="bg"></span>'+
+                        '</div>'+
+                     '</div>'+
+                     '<div class="title" title="사탄의 인형"><h3>사탄의 인형</h3></div>'+
+                     '<div class="infoBtn" >'+
+                         '<a  class="btn detail_btn" href="#" >상세정보</a>'+
+                         '<a  class="btn reserveBtn" href="#">예매하기</a>'+
+                         '<input type="hidden" class="openday" value="2019.06.20" />'+
+                         '<input type="hidden" class="director" value="라스 클리브버그" />'+
+                         '<input type="hidden" class="actors" value="마크 해밀, 오브리 플라자, 가브리엘 베이트먼, 브라이언 타이리 헨리" />'+
+                         '<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/AE/C60EE4-FC23-4139-AB23-0F8F4BB84F37.large.jpg" />'+
+                         '<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/5D/CA6AF0-D100-4F36-A1BE-95C360284C2D.large.jpg" />'+
+                         '<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/76/B10835-51BD-4B75-B087-A99A68BE15B7.large.jpg" />'+
+                         '<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/42/D06DDB-2298-4379-B65D-1BCB443D43AB.large.jpg" />'+
+                     '</div>'+
+                 '</li>';
+     var tag4 = '<li class="item">'+
+                     '<div class="thumb_flip">'+
+                         '<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/01/3EA32B-AC6E-444E-ADD8-E3D8C05193CD.large.jpg" /></div>'+
+                         '<div class="back">'+
+                            '<div class="star-rating2" style="float:left;">'+
+                                '<span style="width:20%;"></span>'+
+                            '</div>'+
+                            '<p >괜히봤네요</p>'+
+                            '<span class="bg"></span>'+
+                        '</div>'+
+                     '</div>'+
+                     '<div class="title" title="어벤져스: 엔드게임"><h3>어벤져스: 엔드게임</h3></div>'+
+                     '<div class="infoBtn" >'+
+                         '<a  class="btn detail_btn" href="#" >상세정보</a>'+
+                         '<a  class="btn reserveBtn" href="#">예매하기</a>'+
+                         '<input type="hidden" class="openday" value="2019.04.24" />'+
+                         '<input type="hidden" class="director" value="안소니 루소, 조 루소" />'+
+                         '<input type="hidden" class="actors" value="로버트 다우니 주니어, 크리스 에반스, 마크 러팔로, 크리스 헴스워스, 스칼렛 요한슨, 제레미 레너, 돈 치들, 폴 러드, 브리 라슨, 카렌 길런, 브래들리 쿠퍼, 조슈 브롤린" />'+
+                         '<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/7F/C127BB-3A72-4E27-A9FA-461AD95ABC39.large.jpg" />'+
+                         '<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/29/C27683-B2C7-47C1-9B5E-7213F669B937.large.jpg" />'+
+                         '<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/18/BDD177-AAAF-4556-9ACC-BCDBEA2520C9.large.jpg" />'+
+                         '<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/3A/9529A0-7B90-4AAA-AA9A-572FD91C42ED.large.jpg" />'+
+                     '</div>'+
+                 '</li>';
+
+    $(".view_more").before(tag1,tag2,tag3,tag4);
+    $(".view_more").hide(); //.view_more full_width 띄어쓰기는 셀렉터 안에서 자식 찾는거 
+    //아이디 클래스 태그 태그 속성
+})
+
+$("#saveBtn").click(function(){
+    // 빈값("") 대신 id content 태그의 value 값을 변수에 담습니다
+    var content = "";
+    if(content =="") {
+        // 경고창 출력
+    }
+    else {
+        var tag = '<li>'+
+                    '<div class="photo_profile">'+
+                        '<img src="http://image2.megabox.co.kr/mop/home/user/profile_m.png" alt="interpret** 프로필사진 없음">'+
+                    '</div>'+
+                    '<div class="text">'+
+                        '<div class="name">'+
+                            '<strong>리메*</strong>'+
+                            '<span>18.03.10</span>'+
+                        '</div>'+
+                        '<p>'+
+                            '<span class="comment">댓글내용 등록</span>'+
+                        '</p>'+
+                    '</div>'+
+                '</li>';
+
+        // 기능 추가
+
+    }
+})
+
