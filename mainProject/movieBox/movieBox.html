@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link href="./css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/magnify.css">
+	<script src="movieBox.js"></script>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script src="./js/jquery.magnify.js"></script>
+	<!-- 별점 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+
+
+
+
+	
+<!-- 01. 상단 광고 영역 -->
+<div style="text-align: center;position: relative;width: 100%;background: #392b45;" id="adsLayer">
+		<img src="http://mlink-cdn.netinsight.co.kr/2018/09/27/03633938f323d2e6ce510633a19df329.jpg" width="970" height="80" alt="" />
+		<button class="btn_close"></button>
+</div>	
+
+
+
+
+
+<!--  02. 자동 슬라이드 이미지 갤러리 영역 -->
+<div class="section no1">
+	<div class="sm_mv" style="overflow-x:hidden;">
+	    <dl class="sm_mv_slide" style="margin: 0px;">
+			<!-- 이미지 영역  1-->
+	        <dd  style="display: block;">
+		            <a href="#" class="sm_mv_detail">
+		                <span class="sm_mv_text">
+		                    <strong>롱 리브 더 킹: 목포 영웅</strong>
+		                    <span>영웅이 된 보스의 통쾌한 한 방</span>
+		                </span>
+		            </a>
+		            <div class="sm_mv_bg" style="background-image: url(http://image2.megabox.co.kr//mop/frontbanner/2019/DD/A26390-C9CA-4840-94F8-E7842034A8BA.jpg);"></div>
+		    </dd>
+		    <!-- 하단 DOT 포인터 영역 -->
+			<dt style="display: inline-block;">
+	    		<!-- class=on -->
+	            <a href="#" class="dot on">도트</a>
+	        </dt>
+
+	        <!-- 이미지 영역 2 -->
+	        <dd>
+		            <div class="sm_mv_bg" style="background-image: url(http://image2.megabox.co.kr//mop/frontbanner/2019/3A/0DD86D-B81B-4966-8D88-1A55843D0250.jpg);"></div>
+		    </dd>
+		    <!-- 하단 DOT 포인터 영역 -->
+			<dt style="display: inline-block;">
+	    		<!-- class=on -->
+	            <a href="#" class="dot">도트</a>
+	        </dt>
+
+	        <!-- 이미지 영역 3 -->
+	        <dd>
+	        	<!-- class=on -->
+	            <a href="#" class="sm_mv_detail" >
+	                <span class="sm_mv_text">
+	                    <strong>팔스타프</strong>
+	                    <span>한 평생 비극을 풀어낸 거장 베르디의 대표 희극 오페라</span>
+	                </span>
+	            </a>
+	            <div class="sm_mv_bg" style="background-image: url(http://image2.megabox.co.kr//mop/frontbanner/2019/CB/413B42-7D96-4F3D-AFEC-C9BACF66A382.jpg);"></div>
+	        </dd>
+	        <!-- 하단 DOT 포인터 영역 -->
+	        <dt style="display: inline-block;">
+	            <a href="#" class="dot">도트</a>
+	        </dt>
+
+	        <!-- 이미지 영역 4 -->
+	        <dd>
+	        	<!-- class=on -->
+	            <a href="#" class="sm_mv_detail" >
+	                <span class="sm_mv_text">
+	                    <strong>마니</strong>
+	                    <span>알프레드 히치콕의 영화를 오페라로 만난다!</span>
+	                </span>
+	            </a>
+	            <div class="sm_mv_bg" style="background-image: url(http://image2.megabox.co.kr//mop/frontbanner/2019/22/55F7E7-2081-450D-9417-D789E274F456.jpg);"></div>
+	        </dd>
+	        <!-- 하단 DOT 포인터 영역 -->
+	        <dt style="display: inline-block;">
+	            <a href="#" class="dot">도트</a>
+	        </dt>
+		</dl>
+	</div>
+</div>
+<!-- 탭영역 -->
+<div class="container">
+  <div class="outer">
+    <div class="inner">
+      <div class="centered">
+
+
+
+      	<!-- 탭패널 영역 -->
+		<div class="tab">
+		  <button class="tablinks active">더보기</button>
+		  <button class="tablinks">무한스크롤</button>
+		  <button class="tablinks" >어코디언</button>
+		  <button class="tablinks">비메오</button>
+		</div>
+
+      	<!-- 탭1 : 더보기 -->
+        <div class="tabcontent" style="display: block;">
+		 	<ul>
+		 		<!-- 1위 토이스토리 4 -->
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/08/2A0450-B477-4367-A065-85236F25C540.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:80%;"></span>
+							</div>
+							<p >기대해도 좋아요!</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="토이 스토리 4"><h3>토이 스토리 4</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn detail_btn" href="#" >상세정보</a>
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 				<input type="hidden" class="openday" value="2019.06.20" />
+		 				<input type="hidden" class="director" value="조시 쿨리" />
+		 				<input type="hidden" class="actors" value="톰 행크스, 애니 팟츠, 조앤 쿠삭, 팀 알렌" />
+		 				<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/88/51A4AD-2496-4C9F-B6D1-952A6300990A.large.jpg" />
+		 				<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/C1/292A9D-9DE9-409A-A956-CA03E6F80062.large.jpg" />
+		 				<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/82/FA76F3-CFD4-42ED-8F85-512DB075BE08.large.jpg" />
+		 				<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/95/84277A-20A3-4DA8-AB4F-02688394FFD0.large.jpg" />
+		 			</div>
+		 		</li>
+		 		<!-- 2위 알라딘 -->
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/BC/F3BD5B-0A1A-4D98-A22E-3743EEDBF403.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:40%;"></span>
+							</div>
+							<p >무난했어요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="알라딘"><h3>알라딘</h3></div>
+		 			<div class="infoBtn">
+		 				<a  class="btn detail_btn" href="#">상세정보</a>
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 				<input type="hidden" class="openday" value="2019.05.23" />
+		 				<input type="hidden" class="director" value="가이 리치" />
+		 				<input type="hidden" class="actors" value="윌 스미스, 나오미 스콧" />
+
+		 				<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/poster/2019/BC/F3BD5B-0A1A-4D98-A22E-3743EEDBF403.large.jpg" />
+		 				<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/5F/8FB97A-48CA-4043-A86B-90FBA104D1F9.large.jpg" />
+		 				<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/4E/A47D5D-9ECE-44E9-8CB1-306C55AA0EF1.large.jpg" />
+		 				<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/trailer/2019/14/512E32-5C23-40F6-B347-D84F04257828.large.jpg" />
+		 			</div>
+		 		</li>
+		 		<!-- 3위 롱 리브 더 킹: 목포 영웅 -->
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/85/E65CC3-F07E-4D00-B188-0A8C9C14E1B9.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:20%;"></span>
+							</div>
+							<p >괜히봤네요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="롱 리브 더 킹: 목포 영웅"><h3>롱 리브 더 킹: 목포 영웅</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn detail_btn" href="#">상세정보</a>
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 				<input type="hidden" class="openday" value="2019.06.19" />
+		 				<input type="hidden" class="director" value="강윤성" />
+		 				<input type="hidden" class="actors" value="김래원, 원진아, 진선규, 최귀화, 최무성, 주진모" />
+		 				<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/15/2A6F09-4E55-4EB5-987D-4FEDE38DEA8E.large.jpg" />
+		 				<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/CC/CBA2E2-E7CA-44CC-A2D8-A3510C1839A6.large.jpg" />
+		 				<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/FB/DC829B-6083-47CF-85DF-DA573F84C0F2.large.jpg" />
+		 				<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/FB/DC829B-6083-47CF-85DF-DA573F84C0F2.large.jpg" />
+		 			</div>
+		 		</li>
+		 		<!-- 4위 기생충 -->
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/07/F2B772-860E-4A3B-873C-F9E1C8C47966.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:60%;"></span>
+							</div>
+							<p >무난했어요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="기생충"><h3>기생충</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn detail_btn" href="#" >상세정보</a>
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 				<input type="hidden" class="openday" value="2019.05.30" />
+		 				<input type="hidden" class="director" value="봉준호" />
+		 				<input type="hidden" class="actors" value="송강호, 이선균, 조여정, 최우식, 박소담, 장혜진" />
+		 				<input type="hidden" class="still1" value="http://image2.megabox.co.kr/mop/still/2019/61/9D583A-FD87-457A-A215-79CEEDAABF37.large.jpg" />
+		 				<input type="hidden" class="still2" value="http://image2.megabox.co.kr/mop/still/2019/7B/B67F7D-1E59-413B-B0A3-5DBEEEB19884.large.jpg" />
+		 				<input type="hidden" class="still3" value="http://image2.megabox.co.kr/mop/still/2019/05/009411-5F0A-4F7A-A579-6D4E02B10A56.large.jpg" />
+		 				<input type="hidden" class="still4" value="http://image2.megabox.co.kr/mop/still/2019/60/39742C-EE48-48D5-B8A8-5BFD329B28BB.large.jpg" />
+		 			</div>
+		 		</li>
+		 		
+		 		<button type="button" class="view_more full_width" >더보기 +</button>
+		 	</ul>
+		</div>
+
+		<!-- 탭2 : 무한스크롤 기능 -->
+		<div class="tabcontent">
+		 	<ul>
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/8B/1CCE00-C13F-4E84-BAEB-03CDAF814F32.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:20%;"></span>
+							</div>
+							<p >괜히봤네요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="[신화] 이웃집 토토로"><h3>[신화] 이웃집 토토로</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 			</div>
+		 		</li>
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/E3/0B76BB-1E1B-4B0E-B81C-C8BAD604FEB3.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:20%;"></span>
+							</div>
+							<p >괜히봤네요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="비스트"><h3>비스트</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 			</div>
+		 		</li>
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/65/F2A58F-3A69-43EC-8104-FAB68C9F6628.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:20%;"></span>
+							</div>
+							<p >괜히봤네요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="마녀배달부 키키"><h3>마녀배달부 키키</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 			</div>
+		 		</li>
+		 		<li class="item">
+		 			<div class="thumb_flip">
+			 			<div class="front"><img class="img" src="http://image2.megabox.co.kr/mop/poster/2019/C0/DD90E1-0BE4-43E8-A31E-E788E3FD1F99.large.jpg" /></div>
+			 			<div class="back">
+				    		<div class="star-rating2" style="float:left;">
+								<span style="width:20%;"></span>
+							</div>
+							<p >괜히봤네요</p>
+							<span class="bg"></span>
+						</div>
+		 			</div>
+		 			<div class="title" title="애나벨 집으로"><h3>애나벨 집으로</h3></div>
+		 			<div class="infoBtn" >
+		 				<a  class="btn reserveBtn" href="#">예매하기</a>
+		 			</div>
+		 		</li>
+		 		
+		 	</ul>
+		</div>
+
+		
+		<!-- 탭3 : 어코디언 기능 적용 -->
+		<div class="tabcontent">
+			<div class="panel-group faq">
+				<div style="margin-top:22px;">
+			  		<div class="panel-group" >
+					  	<div class="header">
+							<span class="hd1"></span>
+							<span class="hd2">분류</span>
+							<span class="hd3">질문</span>
+						</div>
+						<div class="panel">
+							<a class="accordion-toggle title show"  href="#">
+								<span class="hd1">1</span>
+								<span class="hd2">멤버십</span>
+								<span class="hd3">포인트 적립을 못받았어요? 어떻게 해야하나요?</span>
+							</a>
+							<div class="panel-collapse collapse open">
+								<div class="panel-body contents">
+									<p>포인트 적립은 상영시간 전까지만 적립이 가능하며,</p>
+									<p>상영시간이 지난 티켓에 대해서는 추후 적립이 불가합니다.</p>
+									<p>(이용약관 제 13조 회원의 특전) 영화 상영시간 후 적립이 불가능합니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="panel">
+							<a class="accordion-toggle title"  href="#">
+								<span class="hd1">2</span>
+								<span class="hd2">멤버십</span>
+								<span class="hd3">포인트소멸은 언제, 어떻게 이루어지나요?</span>
+							</a>
+							<div class="panel-collapse collapse">
+								<div class="panel-body contents">
+									<p>메가박스 적립 포인트의 유효기간은 최초 적립시점에서 24개월이 지난 시점의 해당 월 말일이며,&nbsp;&nbsp;&nbsp;&nbsp;</p>
+									<p>해당 기간 안에 사용 하지 못한 잔여포인트가 매월 말일 영업 종료 후 소멸 됩니다.</p>
+									<p>(이용약관 ‘제 13조 회원의 특전’에 의거)</p>
+									<p>&nbsp;</p>
+									<p>예)&nbsp;&nbsp;2013년 5월 1일~31일까지 적립한 포인트 중 미사용 포인트는 2015년 5월 31일 영업종료 후</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 소멸이 되고, 2013년 6월 1일~30일까지 적립한 포인트 중 미사용 포인트는 2015년 6월 30일</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;영업종료 후 소멸됩니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="panel">
+							<a class="accordion-toggle title"  href="#">
+								<span class="hd1">3</span>
+								<span class="hd2">영화예매</span>
+								<span class="hd3">영화 관람권으로 예매하는 방법</span>
+							</a>
+							<div class="panel-collapse collapse">
+								<div class="panel-body contents">
+									<p>영화 관람권 이용 방법은</p>
+									<p>홈페이지 로그인 후 결제 마지막 단계에서</p>
+									<p>[영화관람권/VIP쿠폰] - [쿠폰번호 및 인증번호 입력] - [관람권 등록] - [사용] - [적용] - [결제]</p>
+									<p>차례로 선택하시면 예매가 완료 되며, 예매 번호 확인이 가능합니다.</p>
+									<p>&nbsp;</p>
+									<p>완료된 예매 내역은 &lt;예매확인/취소&gt;에서도 확인 가능합니다.</p>
+									<p>&nbsp;</p>
+									<p>* 영화 관람권은 회원 로그인 후 [쿠폰/관람권]에서 등록 가능합니다.</p>
+									<p>* 영화 관람권 사용의 경우, 비회원 예매는 불가능 합니다.</p>
+								</div>
+							</div>
+						</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 탭4 : Vimeo api 기능 적용 -->
+		<div class="tabcontent">
+			<div class="popup_box" style="margin-top:20px;">
+				<div class="stillcut_list" style="height:113px;">
+					<div class="still_slide" style="bottom: 0px;">
+							<ul>
+								<li class="stillLi on"> 
+									<img src="./img/v_img1.png" />
+								</li>
+								<li class="stillLi"> 
+									<img src="./img/v_img2.png" />
+								</li>
+								<li class="stillLi"> 
+									<img src="./img/v_img3.png" />
+								</li>
+								<li class="stillLi"> 
+									<img src="./img/v_img4.png" />
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div >
+					<div class="still_img">
+						<div id="vimeo_payer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- 상단 스크롤 이동 -->
+<div id="toTop" class="iconbutton" >
+	▲
+</div>
+
+
+
+
+
+
+
+
+
+<!--  모달(상세정보) -->
+<div class="modal" >
+	<div class="wrapper">
+		<div class="modal-content clearfix">
+	  		<!-- 닫기버튼 -->
+	    	<span class="close">&times;</span>
+	    	<!-- 이미지 + 간략소개 -->
+			<div class="popup_box clearfix">
+				<div class="left_wrap">
+					<img class="modal_movie_img zoom" style="width:230px;height:336px;" src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+				</div>
+				<div class="right_wrap">
+					<div class="title clearfix">
+						<h2><span id="movie_title">영화제목입력</span></h2>
+					</div>
+					<div class="text">
+						<div class="reservation_wrap">
+							<!-- <a href="#" class="green_btn btn_reservation" >예매하기</a> -->
+						</div>
+						<ul class="info_wrap">
+							<li><strong>개봉일</strong> : <span id="openDay">0000.00.00</span></li>
+							<li><strong>감독</strong> : <span id="director">감독명</span></li>
+							<li><strong>출연진</strong> :
+								<span id="actors">배우목록</span>
+							</li>
+						</ul>
+					</div>
+					<div class="rating" style="position: relative;">
+						<div class="my_rate" style="padding-top: 22px;overflow: visible;white-space: nowrap;">
+							<span class="score-title" style="position: relative;top: 11px;margin-right: 16px;">내 평점</span>
+							<div class="star-rating"></div>
+							<span id="movieDetailStarScoreTxt" style="position: relative;left: 217px;">평점을 입력해주세요</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 스틸컷 -->
+			<div class="popup_box">
+				<div class="stillcut_list">
+					<!--이전다음버튼-->
+				    <!-- <div class="still_prevNext">
+				        <a class="still_prev" style="display:none;" href="#" title="이전 스틸컷 보기">이전 스틸컷</a>
+				        <a class="still_next" href="#" title="다음 스틸컷 보기">다음 스틸컷</a>
+				    </div> -->
+					<div class="still_slide">
+							<ul>
+								<li class="stillLi on"> 
+									<img src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+								</li>
+								<li class="stillLi"> 
+									<img src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+								</li>
+								<li class="stillLi"> 
+									<img src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+								</li>
+								<li class="stillLi"> 
+									<img src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div >
+					<div class="still_img">
+						<img alt="트랜스포머: 최후의 기사 스틸컷1" src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
+					</div>
+				</div>
+			</div>
+			
+			<!--  댓글  -->
+			<div class="popup_box">
+					<h3>한줄평 (<span id="movieCommentTotalCount">0</span>)</h3>
+					<!-- 댓글 등록 -->
+					<div class="input">
+						<div class="textarea">
+							<textarea title="댓글쓰기" name="comment" id="content" cols="30" rows="10" maxlength="100" ></textarea>
+						</div>
+						<div class="btn_wrap">
+							<input type="button" id="saveBtn" class="comment_btn"  value="등록" />
+						</div>
+					</div>
+					<div id="movieCommentList" class="list">
+						<ul class="item">
+							<!-- 동적으로 생성되어야 하는 댓글 
+							<li>
+								<div class="photo_profile">
+									<img src="http://image2.megabox.co.kr/mop/home/user/profile_m.png" alt="interpret** 프로필사진 없음">
+								</div>
+								<div class="text">
+									<div class="name">
+										<strong>조*문</strong>
+										<span>18.03.10</span>
+									</div>
+									<p>
+										<span class="comment">반전이 좋네요ㅎㅎ</span>
+									</p>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 모달(예매하기) -->
+<div class="modal2" >
+	<div class="wrapper" style="padding-top: 150px;">
+		<div class="modal-content2 clearfix">
+	  		<!-- 닫기버튼 -->
+	    	<span class="close2">&times;</span>
+	    	<div class="movie_header">
+				<h3 class="h3_seat pull-left">인원/좌석선택</h3>
+			</div>
+			<!-- 가격 금액 설정 -->
+			<div class="bookingSelectSeatTicket">
+					<span id="adult">
+						<label data="10000">일반</label>
+						<label class="reserveCnt">0</label>
+						<a href="#" class="cnt_btn minus">-</a>
+						<a href="#" class="cnt_btn plus">+</a>
+					</span>
+					<span id="student">
+						<label  data="8000" style="margin-left:10px;">청소년</label>
+						<label  class="reserveCnt">0</label>
+						<a href="#" class="cnt_btn minus">-</a>
+						<a href="#" class="cnt_btn plus">+</a>
+					</span>
+					<span id="child">
+						<label  data="6000" style="margin-left:10px;">어린이</label>
+						<label  class="reserveCnt">0</label>
+						<a href="#" class="cnt_btn minus">-</a>
+						<a href="#" class="cnt_btn plus">+</a>
+					</span>
+	    	</div>
+	    	<!-- 좌측 테이블 좌석 영역 -->
+			<div class="leftWrap">
+		    	<div class="place"> 
+		    			<table style="width:90%;margin-bottom:20px;" align="center">
+		    				<tr  style="background : #ececec;font-weight:bold;">
+		    					<td colspan="5">
+		    						SCREEN
+		    					</td>
+		    				</tr>
+	    				</table>
+	    				<table style="width:90%;" align="center">
+		    				<tr>
+		    					<td class="default">1</td>
+		    					<td class="default">2</td>
+		    					<td class="default">3</td>
+		    					<td class="default">4</td>
+		    					<td class="default">5</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">6</td>
+		    					<td class="default">7</td>
+		    					<td class="default">8</td>
+		    					<td class="default">9</td>
+		    					<td class="default">10</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">11</td>
+		    					<td class="default">12</td>
+		    					<td class="default">13</td>
+		    					<td class="default">14</td>
+		    					<td class="default">15</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">16</td>
+		    					<td class="default">17</td>
+		    					<td class="default">18</td>
+		    					<td class="default">19</td>
+		    					<td class="default">20</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">21</td>
+		    					<td class="default">22</td>
+		    					<td class="default">23</td>
+		    					<td class="default">24</td>
+		    					<td class="default">25</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">26</td>
+		    					<td class="default">27</td>
+		    					<td class="default">28</td>
+		    					<td class="default">29</td>
+		    					<td class="default">30</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">31</td>
+		    					<td class="default">32</td>
+		    					<td class="default">33</td>
+		    					<td class="default">34</td>
+		    					<td class="default">35</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="default">36</td>
+		    					<td class="default">37</td>
+		    					<td class="default">38</td>
+		    					<td class="default">39</td>
+		    					<td class="default">40</td>
+		    				</tr>
+		    			</table>
+		    	</div>
+			</div>
+			<!-- 우측 영화포스터 및 가격 -->
+			<div class="rightWrap">
+					<div style="position: relative;">
+						<img id="reserveStillImg" src="https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" style="display: block;width: 100%;height: 242px;" />
+					</div>
+					<div style="background-color: #404040;text-align: center;">
+						<div class="title" style="font-size: 16px;line-height: 16px;color: #fff;">
+							<h4 id="reserveMovieName" style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">영화내용</h4>
+							<div style="padding: 5px 0;font-size: 19px;text-align: right;color: #fff;"><strong id="ticketTotalPrice">0</strong> 원</div>
+						</div>
+					</div>
+			</div>
+   		</div>
+	</div>
+</div>
+</body>
+</html>
