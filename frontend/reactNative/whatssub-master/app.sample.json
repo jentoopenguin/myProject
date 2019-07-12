@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "whatssub",
+    "slug": "whatssub-expo",
+    "privacy": "public",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "facebookDisplayName": "whatssub",
+    "facebookAppId": "<facebookAppId>",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.dooboolab.whatssub",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "<reservedClientId>"
+        }
+      }
+    },
+    "android": {
+      "package": "com.dooboolab.whatssub",
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleSignIn": {
+          "certificateHash": "<certificateHash>"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+dist/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# BUCK
+buck-out/
+\.buckd/
+# *.keystore
+
+coverage/
+package-lock.json
+
+# env
+config.ts
+
+.expo
+.expo-shared
+google-services.json
+GoogleService-Info.plist
+app.json
